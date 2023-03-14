@@ -1,8 +1,4 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
-
-
+// Wrap all code that interacts with the DOM in a call to jQuery to ensure that// the code isn't run until the browser has finished rendering all the elements// in the html.
 $(function () {
   // TODO: 
   // Code to handle the button click & save the information to local storage!!!
@@ -15,11 +11,7 @@ $(function () {
 });
   //Changes Schedule color depending on time!!!!
   // TODO: Add code to apply the past, present, or future class to each time Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time? CHECK the time on calander against local time of user if, else, statments
-  //
+
   function timeTracker () {
 
     var currentTime = moment().hour();
@@ -49,8 +41,6 @@ $(function () {
 
   // Adds text to Schedular and saves text even when refreshed!!!!
   // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
 
   // retreive local storage code
   $("#hour9 .description").val(localStorage.getItem("hour9"));
@@ -64,25 +54,12 @@ $(function () {
   $("#hour5 .description").val(localStorage.getItem("hour5"));
   
 
-
   // TODO: Add code to display the current date in the header of the page!!!
 
   var today = dayjs();
   $('#currentDay').text(today.format('MMM D, YYYY'));
 
 
-
-
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
 
 
   timeTracker();
